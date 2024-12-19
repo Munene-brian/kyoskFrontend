@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Book List</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Title</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
