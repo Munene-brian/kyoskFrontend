@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: angular-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: angular-app
@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: angular-app
-          image: kyoskfront:latest
+          image: kyoskfrontend:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 80
 ---
